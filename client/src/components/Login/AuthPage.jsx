@@ -143,6 +143,30 @@ const AuthPage = () => {
         }
     };
 
+    const handleGuest = () => {
+        setuser({
+            fname : 'Shobhit',
+            lname : 'Singh',
+            email : 'shobhit@gmail.com',
+            _id : 'ilovekpop',
+            pic : 'https://i.ibb.co/p2Xrp35/profile.jpg'
+        })
+        localStorage.setItem('user', JSON.stringify({
+            fname : 'Shobhit',
+            lname : 'Singh',
+            email : 'shobhit@gmail.com',
+            _id : 'ilovekpop',
+            pic : 'https://i.ibb.co/p2Xrp35/profile.jpg'
+        }))
+        toast({
+            title: 'Guest Login Successfull',
+            status: 'success',
+            duration: 2000,
+            isClosable: true,
+        })
+        navigate('/dashboard')
+    }
+
     return (
         <Flex
             direction="column"
@@ -254,6 +278,15 @@ const AuthPage = () => {
                                 {signin ? 'or, Create Account' : 'or, Sign In'}
                             </Text>
                         </Flex>
+                        <Button
+                            colorScheme="red"
+                            w="full"
+                            mb={3}
+                            onClick={handleGuest}
+                            isLoading = {loading}
+                        >
+                            Guest Account
+                        </Button>
 
                         <Flex direction="column" mb={3}>
                             <Button

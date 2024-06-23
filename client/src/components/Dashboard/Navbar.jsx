@@ -79,7 +79,7 @@ const Navbar = () => {
                 {user && <Menu>
                     <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                         <Box display="flex" alignItems="center">
-                            <Avatar size='sm' cursor='pointer' name={user.fname} src={user.fname} />
+                            <Avatar size='sm' cursor='pointer' name={user.fname} src={user.pic} />
                             <Box ml="2">{user.fname}</Box>
                         </Box>
                     </MenuButton>

@@ -63,7 +63,7 @@ const SideDrawer = () => {
 					<DrawerBody>
 
 						{user && <Box>
-							<Avatar size='lg' cursor='pointer' name={user.fname} src={user.fname} />
+							<Avatar size='lg' cursor='pointer' name={user.fname} src={user.pic} />
 							<Text fontSize='xl'>{user.fname} {user.lname}</Text>
 						</Box>}
 						<Divider
